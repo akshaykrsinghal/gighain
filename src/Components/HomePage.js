@@ -2,32 +2,21 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
-import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import RightMenuBar from './RightMenuBar';
-import styled from 'styled-components';
 import { BuildOutlined, BusinessOutlined, HomeOutlined, NoteAltOutlined, PeopleAltOutlined } from '@mui/icons-material';
 import { Avatar } from '@mui/material';
 import { ReactSVG } from "react-svg";
+import { TitleUserWrapper } from '../Assets/StyledComponents/AlocateStyles';
 
 
 const drawerWidth = 275;
-
-
-const TitleUserWrapper = styled.div`
-    display:flex;
-    height: 65px;
-    left: 27px;
-  `;
 
   const Icon = (i,type) =>{
     if(i === 'usericon-0' && type === 2) return(<Avatar alt="Remy Sharp" src="../Images/userlogo.svg" />)
@@ -40,6 +29,7 @@ const TitleUserWrapper = styled.div`
       case 'icon-2' : return <BusinessOutlined style={{color:'#FFF'}} />;
       case 'icon-3' : return <PeopleAltOutlined style={{color:'#FFF'}} />; 
       case 'icon-4' : return <BuildOutlined style={{color:'#FFF'}} />;
+      default : <></>;
     }
   }
 
@@ -66,7 +56,7 @@ export default function PermanentDrawerLeft() {
       >
         <Toolbar />
         <TitleUserWrapper>
-            <img src='../Images/logo.png'/>
+            <img src='../Images/logo.png' alt='logo' />
         </TitleUserWrapper>
         <Divider />
         <List>

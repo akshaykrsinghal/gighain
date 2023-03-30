@@ -4,34 +4,59 @@ import axios from 'axios';
 import { ReactSVG } from 'react-svg';
 import { AssignedGiggerWrapperr } from '../Assets/StyledComponents/AlocateStyles';
 import FormDialog from './FormDialog';
+import styled from 'styled-components';
 
 
 
+const ProofWrapper = styled.a`
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #808080;
+`;
 
-export default function AllocateTableComponent() {
+export default function TrackingTableComponent() {
   const [rows, setrows] = React.useState([]);
   function RenderDate(props) {
       const { value } = props;
       return <AssignedGiggerWrapperr>
-          {value.length}
+          {value?.length}
           <FormDialog giggers={rows}/>
         </AssignedGiggerWrapperr>
   }
+  function RenderDateProof(props) {
+    const { value } = props;
+    return <ProofWrapper href={value}>
+        Directory Link
+      </ProofWrapper>
+}
   const columns = [
     { field: 'id', headerName: 'Gig ID', width: 100 },
     { field: 'gigtype', headerName: 'Gig Type', width: 130 },
-    { field: 'attendance', headerName: 'Attendance', width: 130 },
     {
       field: 'location',
       headerName: 'Location',
-      width: 200,
+      width: 70,
+    },
+    {
+        field:'proof',
+        headerName:'Proof',
+        width:130,
+        renderCell: RenderDateProof
     },
     {
       field: 'giggersassigned',
       headerName: '#Giggers Assigned',
-      width: 204,
+      width: 150,
       renderCell: RenderDate
     },
+    {
+        field: 'giggersaccepted',
+        headerName: '#Giggers Accepted',
+        width: 150,
+        renderCell: RenderDate
+      },
     {
       field: 'status',
       headerName: 'Status',
@@ -45,9 +70,11 @@ export default function AllocateTableComponent() {
         result.push({
           id:gigerItem._id,
           gigtype:gigerItem.Type,
+          proof:gigerItem._id,
           attendance:gigerItem.Attendence,
           location:gigerItem.Location,
           giggersassigned:gigerItem.GiggersAssigned,
+          giggersaccepted:gigerItem.GiggersAssigned,
           status:gigerItem.Status
         })
         return result;
