@@ -65,7 +65,7 @@ export default function TrackingTableComponent() {
   ];
   const getRowData = async()=>{
     let result = [];
-    await axios.get('http://localhost:3001/getGiggers').then(data=>{
+    await axios.get('https://gigchainbetapro.onrender.com/getGiggers').then(data=>{
       data.data.data.map(gigerItem=>{
         result.push({
           id:gigerItem._id,
