@@ -2,7 +2,6 @@ import React from 'react';
 import CheckBox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Button } from '@mui/material';
-import AllocateTableComponent from './AllocateTableComponent';
 import { LocationOnOutlined } from '@mui/icons-material';
 import { StyledOptionComponent, StyledSelectComponent, SubHeading, SubMenuItems, SubMenuTitle, SubMenuWrapper } from '../Assets/StyledComponents/TrackingStyles';
 import TrackingTableComponent from './TrackingTableComponent';

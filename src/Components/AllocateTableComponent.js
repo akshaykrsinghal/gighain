@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import axios from 'axios';
-import { ReactSVG } from 'react-svg';
 import { AssignedGiggerWrapperr } from '../Assets/StyledComponents/AlocateStyles';
 import FormDialog from './FormDialog';
 
