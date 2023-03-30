@@ -20,7 +20,7 @@ function RightMenuBar() {
 
   const selectedMenuLogo = (i)=>{
     if(i==="logo-0" && MenuTitleItems[0] === selectedMenu) return <ReactSVG src="../Images/logo.svg" />
-    if(i==="logo-1" && MenuTitleItems[1] === selectedMenu) return <ReactSVG src="../Images/logo9new.svg" />
+    if(i==="logo-1" && MenuTitleItems[1] === selectedMenu) return <ReactSVG src="../Images/logo9.svg" />
     if(i==="logo-2" && MenuTitleItems[2] === selectedMenu) return <ReactSVG src="../Images/logo8.svg" />
     if(i==="logo-3" && MenuTitleItems[3] === selectedMenu) return <ReactSVG src="../Images/logo10.svg" />
     if(i==="logo-4" && MenuTitleItems[4] === selectedMenu) return <ReactSVG src="../Images/logo11.svg" />
