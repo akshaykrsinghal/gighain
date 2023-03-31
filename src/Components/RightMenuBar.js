@@ -19,14 +19,14 @@ function RightMenuBar() {
   }
 
   const selectedMenuLogo = (i)=>{
-    if(i==="logo-0" && MenuTitleItems[0] === selectedMenu) return <ReactSVG src="../Images/logo.svg" />
-    if(i==="logo-1" && MenuTitleItems[1] === selectedMenu) return <ReactSVG src="../Images/logo9.svg" />
-    if(i==="logo-2" && MenuTitleItems[2] === selectedMenu) return <ReactSVG src="../Images/logo8.svg" />
-    if(i==="logo-3" && MenuTitleItems[3] === selectedMenu) return <ReactSVG src="../Images/logo10.svg" />
-    if(i==="logo-4" && MenuTitleItems[4] === selectedMenu) return <ReactSVG src="../Images/logo11.svg" />
+    if(i==="logo-0" && MenuTitleItems[0] === selectedMenu) return <ReactSVG src="../Images/logo-white.svg" />
+    if(i==="logo-1" && MenuTitleItems[1] === selectedMenu) return <ReactSVG src="../Images/logo1-white.svg" />
+    if(i==="logo-2" && MenuTitleItems[2] === selectedMenu) return <ReactSVG src="../Images/logo2-white.svg" />
+    if(i==="logo-3" && MenuTitleItems[3] === selectedMenu) return <ReactSVG src="../Images/logo3-white.svg" />
+    if(i==="logo-4" && MenuTitleItems[4] === selectedMenu) return <ReactSVG src="../Images/logo4-white.svg" />
 
     switch(i){
-      case "logo-0": return <ReactSVG src="../Images/logo7.svg"  />; 
+      case "logo-0": return <ReactSVG src="../Images/logo.svg"  />; 
       case "logo-1": return <ReactSVG src="../Images/logo1.svg" />; 
       case 'logo-2': return <ReactSVG src="../Images/logo2.svg" />; 
       case 'logo-3': return <ReactSVG src="../Images/logo3.svg" />; 
