@@ -3,14 +3,16 @@ import { DataGrid } from '@mui/x-data-grid';
 import axios from 'axios';
 import { AssignedGiggerWrapperr } from '../Assets/StyledComponents/AlocateStyles';
 import FormDialog from './FormDialog';
+import { LinearProgress } from '@mui/material';
 
 
 
 
 export default function AllocateTableComponent() {
   const [rows, setrows] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(true);
   function RenderDate(props) {
-      const { value } = props;
+    const { value } = props;
       return <AssignedGiggerWrapperr>
           {value.length}
           <FormDialog giggers={rows}/>
@@ -52,6 +54,7 @@ export default function AllocateTableComponent() {
         return result;
       })
       setrows(result);
+      setIsLoading(false);
     })
   }
   
@@ -63,6 +66,10 @@ export default function AllocateTableComponent() {
   return (
     <div style={{ height: 400, width: '100%',backgroundColor:'#FFF',marginTop:'32px' }}>
       <DataGrid
+        slots={{
+          loadingOverlay: LinearProgress
+        }}
+        loading={isLoading}
         rows={rows}
         columns={columns}
         pageSize={5}
