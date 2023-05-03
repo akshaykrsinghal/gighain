@@ -25,4 +25,4 @@ jobs:
     - run : sudo cp -r /home/neosoft/gighain/build/. /var/www/html
     # - run: npm install -g yarn
     - run: pm2 restart 0
-    # - run: npm test
+    - run: npm test
