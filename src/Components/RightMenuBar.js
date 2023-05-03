@@ -37,7 +37,7 @@ function RightMenuBar() {
 
   return (
     <RightWrapper>
-      <TitleWrapper>Gig Execution Module New2</TitleWrapper>
+      <TitleWrapper>Gig Execution Module</TitleWrapper>
       <SubHeading>Allocate Gigs, Track Execution, Track Execution by Giggers</SubHeading>
       <MenuWrapper>
         {
